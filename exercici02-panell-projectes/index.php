@@ -227,7 +227,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
 
             ?>
 
-                <article class="targeta <?php echo $classe; ?>">
+                <article class="targeta">
 
                     <div class="part-superior">
 

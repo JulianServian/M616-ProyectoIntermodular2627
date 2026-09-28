@@ -183,38 +183,24 @@ nav .actiu {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    color: white;
 }
 
 .targeta {
     position: relative;
-
-    width: calc(25% - 8px);
+    width: 24%;
     min-height: 145px;
-
     background-color: white;
 
     border: 1px solid #e5e9ef;
     border-left: 4px solid;
-
     border-radius: 10px;
-
     padding: 14px;
-
     box-shadow: 0 2px 8px #e7eaf0;
 }
 
 
-.targeta.baixa {
-    border-left-color: #25b86b;
-}
 
-.targeta.mitjana {
-    border-left-color: #e7b526;
-}
-
-.targeta.alta {
-    border-left-color: #ef4650;
-}
 
 .part-superior {
     display: flex;

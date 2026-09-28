@@ -23,14 +23,14 @@ $tipusProjectes = [
 ];
 
 $hores = [
-    6,
-    4,
-    3,
-    5,
-    2,
-    4,
-    3,
-    4
+    6, 
+    4, 
+    3, 
+    5, 
+    2, 
+    4, 
+    8, 
+    3
 ];
 
 $prioritats = [
@@ -175,7 +175,26 @@ for ($i = 0; $i < $totalProjectes; $i++) {
 
 
 
-        
+        <section class="titol-projectes">
+
+            <div>
+
+                <h2>Projectes actius</h2>
+
+                <p>
+                    Llista de projectes del curs.
+                    Cada targeta mostra la informació principal i la seva prioritat.
+                </p>
+
+            </div>
+
+            <select>
+                <option value="opcion1">Ordenar per prioritat</option>
+                <option value="opcion2">Opción 2</option>
+            </select>
+
+        </section>
+
 
     </main>
 

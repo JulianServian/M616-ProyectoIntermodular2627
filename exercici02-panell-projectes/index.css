@@ -10,6 +10,7 @@ body {
     color: #14213d;
 }
 
+
 .cap {
     display: flex;
     justify-content: space-between;
@@ -152,4 +153,29 @@ nav .actiu {
     font-size: 10px;
 }
 
+.titol-projectes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.titol-projectes h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.titol-projectes p {
+    margin: 5px 0 0 0;
+    color: #8995a8;
+    font-size: 12px;
+}
+
+.titol-projectes select {
+    background-color: white;
+    border: 1px solid #e1e6ed;
+    border-radius: 9px;
+    padding: 10px 15px;
+    color: #617087;
+}
 

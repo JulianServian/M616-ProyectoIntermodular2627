@@ -75,6 +75,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
 
     <title>Panell intern de projectes</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 
 </head>
@@ -84,7 +85,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
     <header class="cap">
 
         <div class="logo">
-            <div class="logo-icon"></div>
+            <i class="logo-icon fa-solid fa-layer-group" aria-hidden="true"></i>
 
             <div>
                 <h1>Panell intern de projectes</h1>
@@ -122,7 +123,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
 
             <div class="estadistica blau">
 
-                <div class="icona"></div>
+                <i class="icona fa-solid fa-folder-open" aria-hidden="true"></i>
 
                 <div>
                     <strong><?php echo $totalProjectes; ?></strong>
@@ -135,7 +136,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
 
             <div class="estadistica vermell">
 
-                <div class="icona"></div>
+                <i class="icona fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
 
                 <div>
                     <strong><?php echo $prioritatAlta; ?></strong>
@@ -148,7 +149,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
 
             <div class="estadistica verd">
 
-                <div class="icona"></div>
+                <i class="icona fa-solid fa-clock" aria-hidden="true"></i>
 
                 <div>
                     <strong><?php echo $totalHores; ?> h</strong>
@@ -161,7 +162,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
 
             <div class="estadistica lila">
 
-                <div class="icona"></div>
+                <i class="icona fa-solid fa-code" aria-hidden="true"></i>
 
                 <div>
                     <strong>6</strong>
@@ -248,8 +249,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
                     <div class="informacio">
 
                         <p>
-                            <span class="mini-icon"></span>
-
+                            
                             <strong>Tipus:</strong>
 
                             <?php echo $tipusProjectes[$i]; ?>
@@ -287,6 +287,7 @@ for ($i = 0; $i < $totalProjectes; $i++) {
                     <div class="part-inferior">
 
                         <span>
+                            <i class="icona fa-solid fa-clock" aria-hidden="true"></i>
                             <?php echo $hores[$i]; ?> h
                         </span>
 
@@ -310,6 +311,82 @@ for ($i = 0; $i < $totalProjectes; $i++) {
             ?>
 
         </section>
+
+       <section class="inferior">
+
+    <div class="resum">
+
+        <h2>Resum automàtic</h2>
+
+        <p>Estadístiques generals dels projectes</p>
+
+        <div class="resum-dades">
+
+            <div>
+                <i class="icona fa-solid fa-folder-open" aria-hidden="true"></i>
+
+                <div>
+                    <strong><?php echo $totalProjectes; ?></strong>
+                    <p>Projectes totals</p>
+                </div>
+            </div>
+
+
+            <div>
+                <i class="resum-icon vermell-text fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+
+                <div>
+                    <strong><?php echo $prioritatAlta; ?></strong>
+                    <p>Prioritat alta</p>
+                </div>
+            </div>
+
+
+            <div>
+                <i class="resum-icon verd-text fa-solid fa-clock" aria-hidden="true"></i>
+
+                <div>
+                    <strong><?php echo $totalHores; ?> h</strong>
+                    <p>Hores totals</p>
+                </div>
+            </div>
+
+
+            <div>
+                <i class="resum-icon blau-text fa-solid fa-globe" aria-hidden="true"></i>
+
+                <div>
+                    <strong><?php echo $totalWeb; ?></strong>
+                    <p>Projectes web</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="tecnologies">
+
+        <h2>Tecnologies</h2>
+
+        <p>Eines utilitzades en els projectes del curs</p>
+
+        <div class="etiquetes">
+
+            <span class="html">HTML</span>
+            <span class="css">CSS</span>
+            <span class="php">PHP</span>
+            <span class="docker">Docker</span>
+            <span class="wordpress">WordPress</span>
+            <span class="shopify">Shopify</span>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 
     </main>

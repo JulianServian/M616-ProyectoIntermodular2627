@@ -179,3 +179,131 @@ nav .actiu {
     color: #617087;
 }
 
+.projectes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.targeta {
+    position: relative;
+
+    width: calc(25% - 8px);
+    min-height: 145px;
+
+    background-color: white;
+
+    border: 1px solid #e5e9ef;
+    border-left: 4px solid;
+
+    border-radius: 10px;
+
+    padding: 14px;
+
+    box-shadow: 0 2px 8px #e7eaf0;
+}
+
+
+.targeta.baixa {
+    border-left-color: #25b86b;
+}
+
+.targeta.mitjana {
+    border-left-color: #e7b526;
+}
+
+.targeta.alta {
+    border-left-color: #ef4650;
+}
+
+.part-superior {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.numero {
+    color: #8290a8;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.part-superior h3 {
+    margin: 0;
+    flex: 1;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+.prioritat {
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.prioritat.baixa {
+    background-color: #d9f7e7;
+    color: #159450;
+}
+
+.prioritat.mitjana {
+    background-color: #fff1bd;
+    color: #b98200;
+}
+
+.prioritat.alta {
+    background-color: #ffdfe1;
+    color: #db303b;
+}
+
+.informacio {
+    margin-top: 14px;
+}
+
+.informacio p {
+    margin: 5px 0;
+    font-size: 10px;
+    color: #69778d;
+}
+
+.informacio strong {
+    color: #4e5d73;
+}
+
+.mini-icon {
+    color: #2179ef;
+    margin-right: 4px;
+}
+
+.descripcio {
+    color: #99a3b3;
+}
+
+.part-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 13px;
+
+    font-size: 10px;
+    color: #64738a;
+}
+
+.prioritat-numero.baixa {
+    color: black;
+}
+
+.prioritat-numero.mitjana {
+    color: black;
+}
+
+.prioritat-numero.alta {
+    color: black;
+}
+
+.parell {
+    display: none;
+}

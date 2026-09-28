@@ -23,14 +23,14 @@ $tipusProjectes = [
 ];
 
 $hores = [
-    6, 
-    4, 
-    3, 
-    5, 
-    2, 
-    4, 
-    8, 
-    3
+    6,
+    4,
+    3,
+    5,
+    2,
+    4,
+    3,
+    4
 ];
 
 $prioritats = [
@@ -174,7 +174,6 @@ for ($i = 0; $i < $totalProjectes; $i++) {
         </section>
 
 
-
         <section class="titol-projectes">
 
             <div>
@@ -189,9 +188,126 @@ for ($i = 0; $i < $totalProjectes; $i++) {
             </div>
 
             <select>
-                <option value="opcion1">Ordenar per prioritat</option>
-                <option value="opcion2">Opción 2</option>
+                <option value="prioritat">Ordenar per prioritat</option>
+
             </select>
+
+        </section>
+
+
+        <section class="projectes">
+
+            <?php
+
+            for ($i = 0; $i < $totalProjectes; $i++) {
+
+                $prioritat = $prioritats[$i];
+
+
+                if ($prioritat >= 1 && $prioritat <= 3) {
+                    $classificacio = "Baixa";
+                    $classe = "baixa";
+                } elseif ($prioritat >= 4 && $prioritat <= 6) {
+                    $classificacio = "Mitjana";
+                    $classe = "mitjana";
+                } else {
+                    $classificacio = "Alta";
+                    $classe = "alta";
+                }
+
+                if (($i + 1) % 2 == 0) {
+
+                    $parellSenar = "Parell";
+
+                } else {
+
+                    $parellSenar = "Senar";
+
+                }
+
+            ?>
+
+                <article class="targeta <?php echo $classe; ?>">
+
+                    <div class="part-superior">
+
+                        <span class="numero">
+                            #<?php echo $i + 1; ?>
+                        </span>
+
+                        <h3>
+                            <?php echo $nomProjectes[$i]; ?>
+                        </h3>
+
+                        <span class="prioritat <?php echo $classe; ?>">
+                            <?php echo $classificacio; ?>
+                        </span>
+
+                    </div>
+
+                    <div class="informacio">
+
+                        <p>
+                            <span class="mini-icon"></span>
+
+                            <strong>Tipus:</strong>
+
+                            <?php echo $tipusProjectes[$i]; ?>
+                        </p>
+
+                        <p class="descripcio">
+
+                            <?php
+
+                            if ($i == 0) {
+                                echo "Landing page moderna i responsive.";
+                            } elseif ($i == 1) {
+                                echo "Catàleg de productes artesans.";
+                            } elseif ($i == 2) {
+                                echo "Blog amb notícies i articles.";
+                            } elseif ($i == 3) {
+                                echo "Revisió i millores de versió mòbil.";
+                            } elseif ($i == 4) {
+                                echo "Pàgina de servei amb formulari.";
+                            } elseif ($i == 5) {
+                                echo "Galeria filtrable de projectes.";
+                            } elseif ($i == 6) {
+                                echo "Connexió amb API externa.";
+                            } else {
+                                echo "Botiga amb productes i pagament.";
+                            }
+
+                            ?>
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="part-inferior">
+
+                        <span>
+                            <?php echo $hores[$i]; ?> h
+                        </span>
+
+                        <span class="prioritat-numero <?php echo $classe; ?>">
+                            Prioritat: <?php echo $prioritat; ?>/10
+                        </span>
+
+                    </div>
+
+
+                    <div class="parell">
+                        <?php echo $parellSenar; ?>
+                    </div>
+
+                </article>
+
+            <?php
+
+            }
+
+            ?>
 
         </section>
 

@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #243247;
+    font-size: 12px;
+}
+
+.contenedor {
+    width: 96%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+.cabecera {
+    padding: 8px 0;
+    background-color: #293646;
+    color: white;
+    border-bottom: 1px solid #dce5f0;
+}
+
+.cabecera .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 25px;
+}
+
+.cabecera .etiqueta,
+.cabecera .contenedor > p,
+.cabecera h1,
+.datos-cabecera {
+    display: none;
+}
+
+.cabecera .contenedor::before {
+    content: "</>  Guía DAW2";
+    order: 1;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.cabecera .contenedor::after {
+    content: "Inicio     Conceptos     Resumen";
+    order: 3;
+    color: white;
+    font-size: 11px;
+    white-space: pre;
+}
+
+.introduccion {
+    position: relative;
+    margin: 0 -2.1%;
+    padding: 14px 2.1%;
+    background-color: #e8f3ff;
+}
+
+.introduccion h2 {
+    margin: 0 0 5px;
+    color: #1c3049;
+    font-size: 25px;
+}
+
+.introduccion p {
+    margin: 0;
+    color: #71839b;
+    font-size: 12px;
+}
+
+.resumen {
+    display: none;
+}
+
+.listado {
+    margin-top: 12px;
+}
+
+.titulo-listado {
+    margin-bottom: 10px;
+}
+
+.titulo-listado h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.titulo-listado span {
+    color: #8190a3;
+    font-size: 10px;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 8px);
+    min-width: 0;
+    padding: 9px;
+    background-color: white;
+    border: 1px solid #e1e8f0;
+    border-top: 4px solid #a8c9ff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #172b4d08;
+}
+
+.tarjeta.php {
+    border-top-color: #8ebeff;
+}
+
+.tarjeta.javascript {
+    border-top-color: #ffdc73;
+}
+
+.tarjeta.css {
+    border-top-color: #9ae5c3;
+}
+
+.tarjeta.html {
+    border-top-color: #8be2ec;
+}
+
+.tarjeta-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.bloque {
+    display: inline-block;
+    padding: 4px 7px;
+    background-color: #e8f2ff;
+    color: #2865a9;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.php .bloque {
+    background-color: #dcecff;
+    color: #2865a9;
+}
+
+.javascript .bloque {
+    background-color: #fff0b9;
+    color: #826000;
+}
+
+.css .bloque {
+    background-color: #d9f8e8;
+    color: #168254;
+}
+
+.html .bloque {
+    background-color: #d8f6fa;
+    color: #137888;
+}
+
+.numero-tarjeta {
+    display: none;
+}
+
+.tarjeta h3 {
+    margin: 3px 0 5px;
+    color: #253247;
+    font-size: 13px;
+}
+
+.tarjeta p {
+    min-height: 42px;
+    margin: 0 0 8px;
+    color: #536176;
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.ejemplo {
+    min-height: 65px;
+    margin-top: auto;
+    padding: 8px;
+    background-color: #263441;
+    color: #e7edf6;
+    border-radius: 5px;
+}
+
+.ejemplo span {
+    display: none;
+}
+
+.ejemplo code {
+    color: #dbe8f5;
+    font-family: Consolas, monospace;
+    font-size: 9px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.estado {
+    margin-top: 7px;
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.destacado {
+    color: #3d719e;
+}
+
+.basico {
+    color: #8591a1;
+}
+
+.bloques-utilizados {
+    margin: 15px 0 25px;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #e3eaf2;
+    border-radius: 7px;
+}
+
+.bloques-utilizados h2 {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.lista-bloques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.bloque-resumen {
+    padding: 6px 12px;
+    background-color: #e3efff;
+    color: #35639c;
+    border-radius: 15px;
+    font-size: 10px;
+}
+
+@media (max-width: 900px) {
+    .tarjeta {
+        width: calc(33.33% - 7px);
+    }
+}
+
+@media (max-width: 650px) {
+    .contenedor {
+        width: 94%;
+    }
+
+    .tarjeta {
+        width: calc(50% - 5px);
+    }
+
+    .introduccion h2 {
+        font-size: 22px;
+    }
+
+    .cabecera .contenedor::after {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 420px) {
+    .tarjeta {
+        width: 100%;
+    }
+
+    .tarjeta p {
+        min-height: auto;
+        margin-bottom: 12px;
+    }
+
+    .ejemplo {
+        min-height: 55px;
+    }
+
+    .cabecera .contenedor::after {
+        content: "Inicio";
+    }
+}
